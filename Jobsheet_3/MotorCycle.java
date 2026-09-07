@@ -41,6 +41,8 @@ public class MotorCycle {
         public void setSpeed(int speed) {
             if (!this.isMechineOn && speed > 0) {
                 System.out.println("The speed must not exceed 0 when the engine is off");
+            } else if (speed > 100) {
+                System.out.println("The speed must not exceed 100");
             } else {
                 this.speed = speed;
             }
