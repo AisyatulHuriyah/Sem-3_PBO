@@ -9,8 +9,7 @@ public class MotorCycle {
         System.out.println("Plat Number: " + this.platNumber);
         if (isMechineOn) {
             System.out.println("Mechine is On");
-        } 
-        else {
+        } else {
             System.out.println("Mechine is Off");
         }
 
@@ -18,33 +17,35 @@ public class MotorCycle {
         System.out.println("=========================");
     }
 
-        public String getPlatNumber() {
-            return platNumber;
-        }
+    public String getPlatNumber() {
+        return platNumber;
+    }
 
-        public void setPlatNumber(String platNumber) {
-            this.platNumber = platNumber;
-        }
+    public void setPlatNumber(String platNumber) {
+        this.platNumber = platNumber;
+    }
 
-        public boolean isMechineOn() {
-            return isMechineOn;
-        }
+    public boolean isMechineOn() {
+        return isMechineOn;
+    }
 
-        public void setMechineOn(boolean mechineOn) {
-            isMechineOn = mechineOn;
-        }
+    public void setMechineOn(boolean mechineOn) {
+        isMechineOn = mechineOn;
+    }
 
-        public int getSpeed() {
-            return speed;
-        }
+    public int getSpeed() {
+        return speed;
+    }
 
-        public void setSpeed(int speed) {
-            if (!this.isMechineOn && speed > 0) {
-                System.out.println("The speed must not exceed 0 when the engine is off");
-            } else if (speed > 100) {
-                System.out.println("The speed must not exceed 100");
-            } else {
-                this.speed = speed;
-            }
+    public void setSpeed(int speed) {
+        if (!this.isMechineOn && speed > 0) {
+            System.out.println("The speed must not exceed 0 when the engine is off");
+        } else if (speed > 100) {
+            System.out.println("The speed must not exceed 100");
+        } else if (speed < 0) {
+            System.out.println("Speed cannot be negative");
+        } else {
+            this.speed = speed;
+        }
     }
 }
